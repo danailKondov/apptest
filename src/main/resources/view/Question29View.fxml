@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="490.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.danko.controller.SpecialQuestionViewController">
+   <children>
+      <Label layoutX="22.0" layoutY="7.0" prefHeight="198.0" prefWidth="755.0" text="В порядке искового производства арбитражным судом первой инстанции резолютивная часть решения объявлена 07.05.2018. Полный текст решения изготовлен судом 11.05.2018. Решение арбитражного суда опубликовано в картотеке арбитражных дел 14.05.2018.Какая дата является последним возможным днем для подачи апелляционной жалобы на решение арбитражного суда с учетом необходимости соблюдения срока, установленного процессуальным законом, для апелляционного обжалования?" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="212.0" fitWidth="573.0" layoutX="58.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/calendar.jpg" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="datePicker" editable="false" layoutX="192.0" layoutY="434.0" onAction="#onDataPicked" prefHeight="36.0" prefWidth="192.0" promptText="01.01.2018" />
+      <Label layoutX="46.0" layoutY="434.0" prefHeight="36.0" prefWidth="138.0" text="Выберите дату:" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
