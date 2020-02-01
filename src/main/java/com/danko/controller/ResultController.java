@@ -16,6 +16,6 @@ public class ResultController {
     }
 
     public void showResult(double points) {
-        resultText.setText(String.format("%2f", points));
+        resultText.setText(String.format("%.2f", points));
     }
 }
