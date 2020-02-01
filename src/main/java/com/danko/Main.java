@@ -21,39 +21,12 @@ import com.danko.controller.SpecialQuestionViewController;
 import com.danko.model.Answer;
 import com.danko.model.Question;
 import com.danko.util.Util;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Main extends Application {
-
-    private static final int ID_COLUMN_INDEX = 0;
-    private static final int QUESTION_TEXT_COLUMN_INDEX = 1;
-    private static final int ANSWER_OPTIONS_COLUMN_INDEX = 2;
-    private static final int CANDIDATE_ANSWER_COLUMN_INDEX = 3;
-    private static final int RIGHT_ANSWER_COLUMN_INDEX = 4;
-    private static final int RESULT_COLUMN_INDEX = 5;
-    private static final int POINTS_COLUMN_INDEX = 6;
-    private static final short MAIN_ROW_HEIGHT = (short) (40 * 20);
-    private static final short REGULAR_ROW_HEIGHT = (short) (50 * 20);
-    private static final String FILE_NAME_PATTERN = "test_result_%s_%s.xlsx";
-
 
     private List<Question> questions;
     private Stage primaryStage;
@@ -61,8 +34,6 @@ public class Main extends Application {
     private String lastName;
     private QuestionController questionController;
     private SpecialQuestionViewController specialQuestionViewController;
-    private XSSFWorkbook workbook;
-    private int rows;
 
     public static void main(String[] args) {
         launch(args);
