@@ -12,9 +12,10 @@ import java.time.Month;
 
 public class SpecialQuestionViewController {
 
-    public static final String APRIL_MONTH = "апрель";
-    public static final String MAY_MONTH = "май";
-    public static final String JUNE_MONTH = "июнь";
+    private static final String APRIL_MONTH = "апрель";
+    private static final String MAY_MONTH = "май";
+    private static final String JUNE_MONTH = "июнь";
+
     @FXML
     private ComboBox<Integer> dayPicker;
 
