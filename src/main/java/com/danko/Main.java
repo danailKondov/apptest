@@ -60,12 +60,12 @@ public class Main extends Application {
         fxmlLoader.setLocation(getClass().getResource("/view/MainView.fxml"));
         AnchorPane mainRootLayout = fxmlLoader.load();
         BackgroundImage image = new BackgroundImage(
-                new Image(this.getClass().getResource("/img/uzor-4.jpg").toString(), 400, 0, true, true),
+                new Image(this.getClass().getResource("/img/BGP_rgb.jpg").toString(), 200, 0, true, true),
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
                 new BackgroundPosition(
-                        Side.RIGHT, 0, true,
-                        Side.BOTTOM, 0, true),
+                        Side.LEFT, 0, true,
+                        Side.TOP, 0, true),
                 BackgroundSize.DEFAULT);
         mainRootLayout.setBackground(new Background(image));
         Scene scene = new Scene(mainRootLayout);

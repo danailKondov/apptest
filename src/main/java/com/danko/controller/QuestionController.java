@@ -19,9 +19,7 @@ import com.danko.model.Question;
 
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class QuestionController {
@@ -44,7 +42,6 @@ public class QuestionController {
     private int seconds;
     private int minutes;
     private int numOfQuestion;
-    private Map<Long, List<Answer>> result = new HashMap<>();
     private List<Question> questions;
     private AnchorPane specialQuestionPane;
     private final int ID_OF_SPECIAL_QUESTION = 29;
@@ -107,7 +104,7 @@ public class QuestionController {
         }
 
         // показываем обычный вопрос
-        Label questionText = new Label(question.getQuestionText());
+        Label questionText = new Label(String.format("Вопрос №%d. %s", question.getId(), question.getQuestionText()));
         questionText.setMaxWidth(770);
         questionText.setWrapText(true);
         questionText.setStyle("-fx-font-size:18; -fx-font-style: italic");

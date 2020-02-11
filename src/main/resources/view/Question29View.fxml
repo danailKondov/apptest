@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="490.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.danko.controller.SpecialQuestionViewController">
    <children>
-      <Label layoutX="22.0" layoutY="7.0" prefHeight="198.0" prefWidth="755.0" text="В порядке искового производства арбитражным судом первой инстанции резолютивная часть решения объявлена 07.05.2018. Полный текст решения изготовлен судом 11.05.2018. Решение арбитражного суда опубликовано в картотеке арбитражных дел 14.05.2018.Какая дата является последним возможным днем для подачи апелляционной жалобы на решение арбитражного суда с учетом необходимости соблюдения срока, установленного процессуальным законом, для апелляционного обжалования?" textAlignment="JUSTIFY" wrapText="true">
+      <Label layoutX="22.0" layoutY="7.0" prefHeight="198.0" prefWidth="755.0" text="Вопрос №29. В порядке искового производства арбитражным судом первой инстанции резолютивная часть решения объявлена 07.05.2018. Полный текст решения изготовлен судом 11.05.2018. Решение арбитражного суда опубликовано в картотеке арбитражных дел 14.05.2018.Какая дата является последним возможным днем для подачи апелляционной жалобы на решение арбитражного суда с учетом необходимости соблюдения срока, установленного процессуальным законом, для апелляционного обжалования?" textAlignment="JUSTIFY" wrapText="true">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
@@ -20,11 +19,13 @@
             <Image url="@../img/calendar.jpg" />
          </image>
       </ImageView>
-      <DatePicker fx:id="datePicker" editable="false" layoutX="192.0" layoutY="434.0" onAction="#onDataPicked" prefHeight="36.0" prefWidth="192.0" promptText="01.01.2018" />
       <Label layoutX="46.0" layoutY="434.0" prefHeight="36.0" prefWidth="138.0" text="Выберите дату:" underline="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <ComboBox fx:id="dayPicker" layoutX="205.0" layoutY="440.0" onAction="#onDaySelected" prefHeight="25.0" prefWidth="76.0" promptText="день" visibleRowCount="5" />
+      <ComboBox fx:id="monthPicker" layoutX="298.0" layoutY="440.0" onAction="#onMonthSelected" prefHeight="25.0" prefWidth="138.0" promptText="месяц" visibleRowCount="3" />
+      <Label fx:id="errorMessage" layoutX="455.0" layoutY="434.0" prefHeight="42.0" prefWidth="335.0" textFill="RED" />
    </children>
 </AnchorPane>
